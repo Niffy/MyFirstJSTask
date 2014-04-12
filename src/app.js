@@ -30,7 +30,8 @@ Ext.onReady(function(){
         	name,
         	contact,
         	department,
-        	subject
+        	subject,
+        	editor
         ],
         buttons: [{
             text: 'Save',
@@ -236,9 +237,25 @@ xtype: 'container',
      	xtype: 'textfield',
         name: 'subject',
         fieldLabel: 'Subject',
+        allowBlank: false,
         anchor: '100%'
     }]
 	
+};
+
+var editor = {
+	xtype: 'container',
+	title: 'Enquiry',
+	layout: 'anchor',
+	align: 'strechmax',
+	margin: '10 0 0 0',
+	items: [{
+		xtype: 'htmleditor',
+		name: 'enquiry',
+		fieldLabel: 'Enquiry',
+		height: 200,
+		anchor: '100%'
+	}]
 };
 
 var individual = {
