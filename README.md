@@ -5,7 +5,7 @@ I was able to make the code more modular, I did this by cutting the form up into
 
 Despite saying the pop up offering less possibilities, there is an example of creating a pop up with the modular sections.  This example can be seen in the `popup.html` page with its code in `src\com\webree\popup.js` This example misses out the department section to show how easy it is to add or remove sections.
 
-I have also taken the liberty of moving the values used to populate drop down boxes contents in to there own variables, again this allows for cleaner code to maintain and to also introduce new departments or titles.  As a side note, it would be possible to change the department section into something less specific such as a classification of what the enquiry entails.  The modularity of the code would allow this to be done very quickly.
+I have also taken the liberty of moving the values used to populate drop down boxes contents in to their own variables, again this allows for cleaner code to maintain and to also introduce new departments or titles.  As a side note, it would be possible to change the department section into something less specific such as a classification of what the enquiry entails.  The modularity of the code would allow this to be done very quickly.
 
 I have also introduce a HTML Editor as the inquiry box.  This would allow for a person to format and structure their enquiry in a way which is more readable with the possibility of emphasis on passages of text. It also allows for links to be added to the enquiry in a more presentable way.
 
@@ -34,7 +34,7 @@ Place Extjs sdk into a folder called extjs.
 
 To generate docs use the JSDUCK binary.
 
-Command which I run.
+Command which I ran.
 
 `
 jsduck-6.0.0-beta.exe PATHTOEXTJS\webtree\extjs\src PARTHTOPROJECT\webtreeTask\src --output PARTHTOPROJECT\webtreeTask\docs  --warnings=-all:PATHTOEXTJS\webtreeTask\extjs\src
