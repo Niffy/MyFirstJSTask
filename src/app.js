@@ -29,7 +29,8 @@ Ext.onReady(function(){
         items: [
         	name,
         	contact,
-        	department
+        	department,
+        	subject
         ],
         buttons: [{
             text: 'Save',
@@ -223,6 +224,21 @@ var department ={
             valueField: 'value',
             store: departments
     }]
+};
+
+var subject = {
+xtype: 'container',
+	title: 'Subject',
+	layout: 'anchor',
+	align: 'stretchmax',
+	margin: '10 0 0 ',
+    items: [{
+     	xtype: 'textfield',
+        name: 'subject',
+        fieldLabel: 'Subject',
+        anchor: '100%'
+    }]
+	
 };
 
 var individual = {
