@@ -28,7 +28,8 @@ Ext.onReady(function(){
         bodyPadding: 10,
         items: [
         	name,
-        	contact
+        	contact,
+        	department
         ],
         buttons: [{
             text: 'Save',
@@ -56,6 +57,16 @@ var titles = Ext.create('Ext.data.Store', {
 		{name : 'Miss', value: 'miss'},
 		{name : 'Dr', value: 'dr'},
 		{name : 'Sir', value: 'sir'}
+	]
+});  
+
+var departments = Ext.create('Ext.data.Store', {
+	fields: ['name', 'value'],
+	data   : [
+		{name : 'IT',   value: 'it'},
+		{name : 'Accounts',  value: 'accounts'},
+		{name : 'Sales', value: 'sales'},
+		{name : 'General Enquries', value: 'general'}
 	]
 });  
 
@@ -168,7 +179,6 @@ xtype: 'container',
 	layout: 'anchor',
 	align: 'stretchmax',
 	margin: '10 0 0 ',
-	autoWidth: true,
     items: [{
         xtype: 'textfield',
         name: 'emailAddress',
@@ -181,13 +191,38 @@ xtype: 'container',
      	xtype: 'textfield',
         name: 'number',
         fieldLabel: 'Contact Number',
-        allowBlank: false,
-        vtype: 'email',
+        //vtype: 'email', //Find out vtype for numbers only
         anchor: '100%'
     },{
-    	
+    	xtype: 'checkboxgroup',
+            fieldLabel: 'Preferred contact method',
+            items: [
+                {boxLabel: 'Email', name: 'cb-auto-1', checked: true},
+                {boxLabel: 'Phone', name: 'cb-auto-2'}
+            ]
     }]
 	
+};
+
+var department ={
+	xtype: 'container',
+	title: 'Department',
+	layout: 'anchor',
+	align: 'stretchmax',
+	margin: '5 0 0 ',
+    items: [{
+    	 xtype: 'combo',
+            queryMode: 'local',
+            value: 'general',
+            triggerAction: 'all',
+            forceSelection: true,
+            editable: false,
+            fieldLabel: 'Department',
+            name: 'title',
+            displayField: 'name',
+            valueField: 'value',
+            store: departments
+    }]
 };
 
 var individual = {
