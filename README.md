@@ -28,3 +28,14 @@ I have retained the validation of all the fields. These are the following:
 - Subject
 
 The email field has also retained the ability to check if a valid email has been input.
+
+#To make it work
+Place Extjs sdk into a folder called extjs.
+
+To generate docs use the JSDUCK binary.
+
+Command which I run.
+
+`
+jsduck-6.0.0-beta.exe PATHTOEXTJS\webtree\extjs\src PARTHTOPROJECT\webtreeTask\src --output PARTHTOPROJECT\webtreeTask\docs  --warnings=-all:PATHTOEXTJS\webtreeTask\extjs\src
+`
