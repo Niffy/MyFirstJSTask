@@ -59,7 +59,7 @@ Ext.define('com.webree.sections', {
 			 * department names and values. With a name being what is shown and
 			 * a related value which is stored/sent.
 			 * 
-			 * @return {{Ext.data.Store}}
+			 * @return {Ext.data.Store}
 			 */
 			getDepartmentData : function() {
 				return this.departments;
