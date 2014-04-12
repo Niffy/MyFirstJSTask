@@ -77,29 +77,29 @@ Ext.define('com.webree.sections', {
 				var name = {
 					xtype : 'fieldcontainer',
 					layout : 'anchor', /*
-										 * everything is anchored to the
-										 * container edges. This saves hard
-										 * coding children sizes
-										 */
+					 * everything is anchored to the
+					 * container edges. This saves hard
+					 * coding children sizes
+					 */
 					items : [{
 						xtype : 'combo',
 						queryMode : 'local',
 						value : 'mr', /* default value */
 						triggerAction : 'all', /*
-												 * this invokes the query stored
-												 * in allQuery
-												 */
+						 * this invokes the query stored
+						 * in allQuery
+						 */
 						forceSelection : true,
 						editable : false,
 						fieldLabel : 'Title',
 						name : 'title', /*
-										 * name of field, you'll see this in the
-										 * popup when form is vaild
-										 */
+						 * name of field, you'll see this in the
+						 * popup when form is vaild
+						 */
 						displayField : 'name', /*
-												 * display the name field from
-												 * the store
-												 */
+						 * display the name field from
+						 * the store
+						 */
 						valueField : 'value', /* name of value field in store */
 						store : this.getTitlesData()
 							/* Call a local function to get the data */
@@ -109,13 +109,13 @@ Ext.define('com.webree.sections', {
 						fieldLabel : 'First Name',
 						allowBlank : false, /* There must be something entered */
 						msgTarget : 'side', /*
-											 * Display error sign to the right
-											 * hand side
-											 */
+						 * Display error sign to the right
+						 * hand side
+						 */
 						anchor : '100%' /*
-										 * fill the whole space basicly when
-										 * using 100%
-										 */
+						 * fill the whole space basicly when
+						 * using 100%
+						 */
 					}, {
 						xtype : 'textfield',
 						name : 'lastName',
@@ -246,9 +246,9 @@ Ext.define('com.webree.sections', {
 								name : 'enquiry',
 								fieldLabel : 'Enquiry',
 								height : 200, /*
-												 * A fixed set height, idealy
-												 * perhaps make this dragable?
-												 */
+								 * A fixed set height, idealy
+								 * perhaps make this dragable?
+								 */
 								anchor : '100%'
 							}]
 				};
